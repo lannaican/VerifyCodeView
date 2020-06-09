@@ -194,13 +194,14 @@ public class VerificationCodeView extends RelativeLayout {
                     tv.drawPwd(mEtPwdRadius);
                 }
                 tv.setText(inputContent);
-                // 添加输入完成的监听
-                if (inputCompleteListener != null) {
-                    inputCompleteListener.inputComplete();
-                }
                 tv.setBackgroundDrawable(mEtBackgroundDrawableNormal);
                 if (i < mEtNumber - 1) {
                     mPwdTextViews[i + 1].setBackgroundDrawable(mEtBackgroundDrawableFocus);
+                }
+                if (i == mEtNumber - 1 && inputContent.length() > 0) {
+                    if (inputCompleteListener != null) {
+                        inputCompleteListener.inputComplete();
+                    }
                 }
                 break;
             }
@@ -216,14 +217,14 @@ public class VerificationCodeView extends RelativeLayout {
                     tv.clearPwd();
                 }
                 tv.setText("");
-                // 添加删除完成监听
-                tv.setBackgroundDrawable(mEtBackgroundDrawableNormal);
+
+                tv.setBackgroundDrawable(mEtBackgroundDrawableFocus);
                 if (i < mEtNumber - 1) {
-                    mPwdTextViews[i + 1].setBackgroundDrawable(mEtBackgroundDrawableFocus);
+                    mPwdTextViews[i+1].setBackgroundDrawable(mEtBackgroundDrawableNormal);
                 }
-                // 添加输入完成的监听
+                // 添加删除完成监听
                 if (inputCompleteListener != null) {
-                    inputCompleteListener.inputComplete();
+                    inputCompleteListener.deleteContent();
                 }
                 break;
             }
