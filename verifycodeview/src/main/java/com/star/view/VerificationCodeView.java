@@ -1,4 +1,4 @@
-package com.star.verifycodeview;
+package com.star.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -81,7 +81,7 @@ public class VerificationCodeView extends RelativeLayout {
         mEtDividerDrawable = typedArray.getDrawable(R.styleable.VerificationCodeView_vcv_divider);
         mEtTextSize = typedArray.getDimensionPixelSize(R.styleable.VerificationCodeView_vcv_text_size, (int) sp2px(16, context));
         mEtTextColor = typedArray.getColor(R.styleable.VerificationCodeView_vcv_text_color, Color.BLACK);
-        mEtBackgroundDrawableFocus = typedArray.getDrawable(R.styleable.VerificationCodeView_vcv_bg_normal);
+        mEtBackgroundDrawableFocus = typedArray.getDrawable(R.styleable.VerificationCodeView_vcv_bg_focus);
         mEtBackgroundDrawableNormal = typedArray.getDrawable(R.styleable.VerificationCodeView_vcv_bg_normal);
         mEtPwd = typedArray.getBoolean(R.styleable.VerificationCodeView_vcv_pwd, false);
         mEtPwdRadius = typedArray.getDimensionPixelSize(R.styleable.VerificationCodeView_vcv_pwd_radius, 0);

@@ -1,4 +1,4 @@
-package com.star.verifycodeview;
+package com.star.view;
 
 import org.junit.Test;
 

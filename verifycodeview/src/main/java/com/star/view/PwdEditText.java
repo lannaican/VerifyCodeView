@@ -1,4 +1,4 @@
-package com.star.verifycodeview;
+package com.star.view;
 
 import android.content.Context;
 import android.util.AttributeSet;

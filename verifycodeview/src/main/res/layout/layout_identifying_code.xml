@@ -14,7 +14,7 @@
 
     </LinearLayout>
 
-    <com.star.verifycodeview.PwdEditText
+    <com.star.view.PwdEditText
         android:id="@+id/et"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
